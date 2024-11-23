@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promociones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Contenedor principal para la presentación de diapositivas -->
+    <div class="slideshow-container">
+        <!-- Cada div con la clase 'slide' es una imagen de la presentación -->
+        <div class="slide fade">
+            <img src="promo1.jpg" alt="Promoción 1" class="promo-image">
+        </div>
+        <div class="slide fade">
+            <img src="promo2.jpg" alt="Promoción 2" class="promo-image">
+        </div>
+        <div class="slide fade">
+            <img src="promo3.jpg" alt="Promoción 3" class="promo-image">
+        </div>
+        <div class="slide fade">
+            <img src="promo4.jpg" alt="Promoción 4" class="promo-image">
+        </div>
+    </div>
+
+    <!-- JavaScript para el slideshow -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.querySelectorAll(".slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none"; // Oculta todas las imágenes
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; } // Reinicia el índice si es necesario
+            slides[slideIndex - 1].style.display = "block"; // Muestra la siguiente imagen
+            setTimeout(showSlides, 4000); // Cambia de imagen cada 4 segundos
+        }
+    </script>
+</body>
+</html>
