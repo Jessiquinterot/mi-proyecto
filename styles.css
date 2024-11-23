@@ -1,99 +1,145 @@
-/* Estilos generales para toda la página */
+/* Estilos generales del cuerpo de la página */
 body {
-    background-color: #000; /* Fondo negro */
-    color: white; /* Texto en blanco para contraste */
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    text-align: center;
+}
+
+/* Contenedor de botones */
+.buttons-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    height: 100vh;
-}
-
-/* Contenedor del logo para centrarlo en la parte superior */
-.logo-container {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-#logo {
-    max-width: 200px; /* Ajusta el tamaño máximo del logo */
-    height: auto;
-    margin: 0 auto;
-    display: block;
-}
-
-/* Estilos de los botones principales */
-.button-container {
-    display: flex;
-    flex-direction: column; /* Alinear los botones uno debajo del otro */
+    gap: 10px;
     align-items: center;
-    gap: 20px;
-}
-
-.button {
-    background-color: #FF6600; /* Color naranja */
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    width: 200px; /* Ancho fijo para todos los botones */
-}
-
-.button:hover {
-    background-color: #cc5200; /* Color más oscuro al pasar el mouse */
-}
-
-/* Estilos para la presentación de diapositivas en promociones */
-.slideshow-container {
-    position: relative;
-    max-width: 600px; /* Tamaño máximo para la pantalla de la tablet */
-    margin: auto;
-    padding: 20px;
-}
-
-/* Oculta las imágenes inicialmente */
-.slide {
-    display: none;
-}
-
-/* Efecto de transición para que la imagen cambie suavemente */
-.fade {
-    animation: fadeEffect 1s;
-}
-
-/* Definición de la animación para el cambio suave */
-@keyframes fadeEffect {
-    from { opacity: 0.4; }
-    to { opacity: 1; }
-}
-
-/* Ajuste para que las imágenes sean adaptables */
-.promo-image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-/* Estilo del botón de Menú en Español */
-.menu-button {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    color: #fff;
-    background-color: #f15a24; /* Color naranja */
-    text-decoration: none;
-    border-radius: 5px;
     margin-top: 20px;
 }
 
-.menu-button:hover {
-    background-color: #e1490f; /* Un poco más oscuro al pasar el cursor */
+.menu-button {
+    background-color: orange;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    width: 200px;  /* Asegura que todos los botones tengan el mismo tamaño */
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
+
+.menu-button:hover {
+    background-color: #ff6600;
+}
+
+/* Encabezado */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Sección de información de promociones */
+.info-section {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Estilos para el menú */
+.menu-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.menu-section img {
+    width: 200px;
+    margin: 10px;
+}
+
+.menu-section h2 {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilos para las pizzas y empanadas */
+.pizza-section,
+.empanadas-section {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.pizza-section img,
+.empanadas-section img {
+    width: 200px;
+    margin: 10px;
+}
+
+.pizza-section h3,
+.empanadas-section h3 {
+    font-weight: bold;
+}
+
+/* Estilos para las secciones de las empanadas */
+.empanadas-list img {
+    width: 100%;
+    max-width: 250px;
+    margin: 10px;
+}
+
+.empanadas-list .empanada-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.empanadas-list .empanada-item h4 {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilos para el slider de imágenes */
+.slider {
+    display: flex;
+    overflow-x: scroll;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.slider img {
+    margin-right: 20px;
+    width: 250px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .menu-button {
+        width: 150px;
+        font-size: 14px;
+    }
+
+    .buttons-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .pizza-section,
+    .empanadas-section {
+        flex-direction: column;
+    }
+}
+
