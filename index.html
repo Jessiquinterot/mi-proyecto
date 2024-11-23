@@ -3,34 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurante</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Menú Multilingüe</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Encabezado -->
-    <header>
-        <h1>Bienvenidos a Big Pizza</h1>
-        <p>Disfruta de nuestros deliciosos menús en diferentes idiomas</p>
-    </header>
+    <div class="container">
+        <!-- Logo centrado -->
+        <img src="images/logo.png" alt="Logo Big Pizza" class="logo">
+        
+        <!-- Título y descripción -->
+        <h1>Disfruta de nuestros deliciosos menús en diferentes idiomas y describe nuestras ofertas exclusivas.</h1>
 
-    <!-- Contenedor de botones -->
-    <div class="buttons-container">
-        <button class="menu-button" onclick="window.location.href='menu-espanol.html'">MENÚ ESPAÑOL</button>
-        <button class="menu-button" onclick="window.location.href='menu-portugues.html'">MENÚ PORTUGUÉS</button>
-        <button class="menu-button" onclick="window.location.href='menu-ingles.html'">MENÚ INGLÉS</button>
-        <button class="menu-button" onclick="window.location.href='menu-ruso.html'">MENÚ RUSO</button>
-        <button class="menu-button" onclick="window.location.href='promociones.html'">PROMOCIONES</button>
+        <!-- Botones de idiomas -->
+        <div class="button-container">
+            <button class="menu-button" onclick="openMenu('es')">Menú en Español</button>
+            <button class="menu-button" onclick="openMenu('pt')">Menú en Portugués</button>
+            <button class="menu-button" onclick="openMenu('en')">Menu in English</button>
+            <button class="menu-button" onclick="openMenu('ru')">Меню на русском</button>
+        </div>
+
+        <!-- Botón de promociones -->
+        <a href="promociones.html" class="promo-button">PROMOCIONES</a>
     </div>
 
-    <!-- Sección de información -->
-    <section class="info-section">
-        <h2>Promociones Especiales</h2>
-        <p>Descubre nuestras ofertas exclusivas.</p>
-    </section>
-
-    <!-- Pie de página -->
-    <footer>
-        <p>&copy; 2024 Big Pizza - Todos los derechos reservados</p>
-    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
