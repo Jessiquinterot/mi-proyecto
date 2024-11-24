@@ -1,22 +1,18 @@
 function openMenu(language) {
-    let url;
     switch (language) {
         case 'es':
-            url = 'menu_es.html';
+            window.location.href = 'menu-espanol.html'; // Aquí cambiamos 'window.open' por 'window.location.href'
             break;
         case 'pt':
-            url = 'menu_pt.html';
+            window.location.href = 'menu-portugues.html'; // Asegúrate de tener este archivo
             break;
         case 'en':
-            url = 'menu_en.html';
+            window.location.href = 'menu-english.html'; // Asegúrate de tener este archivo
             break;
         case 'ru':
-            url = 'menu_ru.html';
+            window.location.href = 'menu-ruso.html'; // Asegúrate de tener este archivo
             break;
         default:
             alert('Opción no disponible');
-            return; // Exit the function if the option is not available
     }
-    window.open(url, '_blank');
-    alert('Redirigiendo al menú en ' + language.toUpperCase()); // Confirmation message
 }
