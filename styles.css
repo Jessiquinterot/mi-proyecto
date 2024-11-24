@@ -3,13 +3,13 @@ body {
     background-color: black;
     color: white;
     font-family: Arial, sans-serif;
-    text-align: center;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
-/* Centrar todo el contenido dentro de un contenedor */
-.container {
+/* Contenedor principal con flexbox para centrar */
+.main-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,27 +18,32 @@ body {
 }
 
 /* Logo centrado */
-.logo {
-    width: 200px; /* Ajusta el tamaño del logo */
-    margin-bottom: 20px;
+.logo-container {
+    margin-bottom: 30px;
 }
 
-/* Estilo del título */
+.logo {
+    width: 200px; /* Ajusta el tamaño del logo */
+}
+
+/* Título */
 h1 {
     font-size: 1.5em;
-    margin: 20px 0;
+    margin-bottom: 20px;
     font-weight: bold;
 }
 
-/* Botones de menú */
+/* Contenedor de botones */
 .button-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
+/* Estilo para los botones */
 .menu-button {
-    background-color: orange;
+    background-color: #ff6600;
     color: black;
     border: none;
     padding: 15px 30px;
@@ -49,15 +54,13 @@ h1 {
 }
 
 .menu-button:hover {
-    background-color: #ff8000;
+    background-color: #e65c00;
 }
 
-/* Estilo del botón de promociones */
+/* Estilo para el botón de promociones */
 .promo-button {
-    display: inline-block;
-    margin-top: 20px;
     padding: 15px 30px;
-    background-color: orange;
+    background-color: #ff6600;
     color: black;
     font-size: 1.2em;
     border-radius: 5px;
@@ -66,5 +69,5 @@ h1 {
 }
 
 .promo-button:hover {
-    background-color: #ff8000;
+    background-color: #e65c00;
 }
