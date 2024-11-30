@@ -1,34 +1,30 @@
-/* General body styling */
+/* Fondo negro para toda la página */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: black;  /* Fondo negro */
+    color: white;             /* Letras blancas */
 }
 
-/* Header styling */
+/* Encabezado */
 header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #333; /* Dark background for header */
-    color: white;
+    background-color: black;
+    padding: 20px;
 }
 
-/* Logo container */
 .logo-container {
-    display: flex;
-    justify-content: center; /* Centers the logo */
-    align-items: center;
+    margin-bottom: 10px;
 }
 
-/* Button container */
 .buttons-container {
     display: flex;
-    justify-content: center; /* Centers buttons */
+    justify-content: center;
     gap: 20px;
 }
 
-/* Styling for the buttons */
 button {
     padding: 10px 20px;
     font-size: 16px;
@@ -42,28 +38,66 @@ button:hover {
     background-color: #e67e22;
 }
 
-/* Menu sections */
+/* Sección del menú */
 .menu-section {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 20px;
 }
 
-/* Individual pizza or empanada section */
-.pizza-section, .empanadas-section {
-    width: 30%;
+.pizza-section {
+    width: 45%;
     padding: 10px;
 }
 
-.pizza-section h3, .empanadas-section h1 {
+.right-side {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    justify-content: space-between;
+}
+
+/* Cuadro naranja para las secciones */
+.orange-box {
+    background-color: #f39c12;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.pizza-specials-section, .pizza-customize-section {
+    margin-bottom: 20px;
+}
+
+.pizza-specials-section ul, .pizza-customize-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Sección de empanadas */
+.empanadas-section {
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.empanadas-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Centra las empanadas */
+}
+
+.empanada-item {
     text-align: center;
+    width: 150px;
 }
 
-.masa-option img {
-    width: 100%; /* Ensures images fill the width */
+.empanada-item img {
+    width: 100%;
+    height: auto;
 }
 
-/* Footer styling */
+/* Estilo del pie de página */
 footer {
     text-align: center;
     padding: 10px;
