@@ -7,16 +7,18 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Alinea todo hacia arriba */
     height: 100vh; /* Altura completa de la ventana */
     text-align: center; /* Centra el contenido de la página */
+    flex-direction: column; /* Organiza todo en una columna */
 }
 
 /* Contenedor principal para centrar el contenido */
 .main-container {
     display: flex;
     flex-direction: column; /* Elementos en columna */
-    align-items: center; /* Centrar horizontalmente */
+    align-items: center; /* Centra horizontalmente */
+    padding-top: 20px; /* Espacio desde la parte superior */
 }
 
 /* Estilos para el logo */
@@ -33,19 +35,21 @@ body {
 .button-container {
     display: flex;
     flex-direction: column; /* Coloca los botones uno encima del otro */
-    gap: 10px; /* Espacio entre los botones */
+    gap: 20px; /* Espacio entre los botones */
+    margin-bottom: 20px;
 }
 
 /* Estilos para los botones de promociones y menús */
 .promo-button, .menu-button {
     background-color: orange; /* Color de fondo naranja */
-    color: black; /* Texto en negro */
+    color: white; /* Texto en negro */
     border: none;
     padding: 15px 30px;
     font-size: 18px;
     cursor: pointer;
     border-radius: 5px;
     width: 200px; /* Ancho fijo para todos los botones */
+    transition: background-color 0.3s;
 }
 
 /* Cambio de color al pasar el ratón por encima de los botones */
@@ -53,31 +57,31 @@ body {
     background-color: darkorange; /* Naranja oscuro al hacer hover */
 }
 
-
-/* Asegúrate de que las listas no tengan puntos */
-.no-bullets {
-    list-style-type: none; /* Elimina los puntos */
-    padding-left: 0; /* Elimina el padding izquierdo */
-}
-
+/* Secciones del menú en columna */
 .menu-section {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Espaciado entre las secciones */
+    gap: 30px; /* Espaciado entre las secciones */
+    width: 100%;
 }
 
+/* Sección de pizzas */
 .pizza-section, .empanadas-section {
-    margin-bottom: 30px; /* Añade espacio entre las secciones */
+    margin-bottom: 20px; /* Espacio entre las secciones */
 }
 
+/* Personaliza tu pizza */
 .masa {
     display: flex;
-    gap: 20px;
+    flex-direction: column; /* Cambia la dirección a columna */
+    gap: 20px; /* Espacio entre las opciones */
+    align-items: center; /* Centra las opciones */
 }
 
+/* Estilo de cada opción de masa */
 .masa-option {
     text-align: center;
-    width: 200px;
+    width: 80%; /* Ancho relativo */
 }
 
 .masa-option img {
@@ -85,10 +89,12 @@ body {
     height: auto;
 }
 
+/* Empanadas */
 .empanadas-list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center; /* Centra las empanadas */
 }
 
 .empanada-item {
@@ -101,10 +107,11 @@ body {
     height: auto;
 }
 
-/* Añadir algo de espacio en el pie de página */
+/* Footer */
 footer {
     text-align: center;
     margin-top: 40px;
+    padding: 10px;
+    background-color: #222;
+    color: white;
 }
-
-
