@@ -7,7 +7,7 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Alinea todo hacia arriba */
+    align-items: center; /* Alineación centralizada tanto vertical como horizontal */
     height: 100vh; /* Altura completa de la ventana */
     text-align: center; /* Centra el contenido de la página */
     flex-direction: column; /* Organiza todo en una columna */
@@ -19,6 +19,8 @@ body {
     flex-direction: column; /* Elementos en columna */
     align-items: center; /* Centra horizontalmente */
     padding-top: 20px; /* Espacio desde la parte superior */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    max-width: 900px; /* Máximo ancho para que no se estire demasiado */
 }
 
 /* Estilos para el logo */
@@ -42,7 +44,7 @@ body {
 /* Estilos para los botones de promociones y menús */
 .promo-button, .menu-button {
     background-color: orange; /* Color de fondo naranja */
-    color: white; /* Texto en negro */
+    color: black; /* Texto en negro */
     border: none;
     padding: 15px 30px;
     font-size: 18px;
@@ -63,6 +65,7 @@ body {
     flex-direction: column;
     gap: 30px; /* Espaciado entre las secciones */
     width: 100%;
+    margin-bottom: 20px;
 }
 
 /* Sección de pizzas */
@@ -105,6 +108,12 @@ body {
 .empanada-item img {
     width: 100%;
     height: auto;
+}
+
+/* Eliminar guiones en la lista de ingredientes */
+.no-bullets {
+    list-style-type: none; /* Elimina los puntos o guiones */
+    padding-left: 0; /* Elimina el padding izquierdo */
 }
 
 /* Footer */
