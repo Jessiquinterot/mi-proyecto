@@ -11,6 +11,7 @@ body {
     height: 100vh;
     text-align: center;
     flex-direction: column;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
 }
 
 /* Contenedor principal para centrar el contenido del menú */
@@ -20,18 +21,28 @@ body {
     align-items: center; /* Centrado horizontal */
     padding-top: 20px;
     width: 100%;
-    max-width: 900px; /* Evita que se estire demasiado */
+    max-width: 100%; /* Evita que se estire demasiado */
     margin-top: 20px; /* Agrega espacio desde la parte superior */
+    box-sizing: border-box; /* Para evitar que los márgenes o el padding causen desbordes */
 }
 
-/* Estilos para el logo */
+/* Estilos para el logo y el letrero */
 .menu-logo-container {
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
     margin-bottom: 20px;
 }
 
 .menu-logo {
     width: 150px;
     height: auto;
+}
+
+/* Sección de Big Pizza */
+.big-pizza {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 /* Secciones de menú */
@@ -41,10 +52,7 @@ body {
     gap: 20px; /* Espaciado entre las secciones */
     margin-bottom: 30px; /* Espacio entre las secciones */
     width: 100%;
-}
-
-.pizza-section, .empanadas-section {
-    margin-bottom: 30px;
+    justify-content: center; /* Centra las secciones */
 }
 
 /* Personalización de la pizza */
