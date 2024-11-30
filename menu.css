@@ -1,130 +1,72 @@
-/* Fondo y color de texto */
+/* General body styling */
 body {
-    background-color: black; /* Fondo negro */
-    color: white; /* Color de texto blanco */
-    font-family: Arial, sans-serif; /* Fuente predeterminada */
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+header {
     display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Alinea todo desde la parte superior */
-    height: 100vh;
-    text-align: center;
-    flex-direction: column;
-    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333; /* Dark background for header */
+    color: white;
 }
 
-/* Contenedor principal para centrar el contenido del menú */
-.menu-container {
+/* Logo container */
+.logo-container {
     display: flex;
-    flex-direction: column; /* Coloca los elementos en columna */
-    align-items: center; /* Centrado horizontal */
-    padding-top: 20px;
-    width: 100%;
-    max-width: 100%; /* Evita que se estire demasiado */
-    margin-top: 20px; /* Agrega espacio desde la parte superior */
-    box-sizing: border-box; /* Para evitar que los márgenes o el padding causen desbordes */
+    justify-content: center; /* Centers the logo */
+    align-items: center;
 }
 
-/* Estilos para el logo y el letrero */
-.menu-logo-container {
+/* Button container */
+.buttons-container {
     display: flex;
-    justify-content: center; /* Centrado horizontal */
-    margin-bottom: 20px;
+    justify-content: center; /* Centers buttons */
+    gap: 20px;
 }
 
-.menu-logo {
-    width: 150px;
-    height: auto;
+/* Styling for the buttons */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f39c12;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Sección de Big Pizza */
-.big-pizza {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
+button:hover {
+    background-color: #e67e22;
 }
 
-/* Secciones de menú */
+/* Menu sections */
 .menu-section {
     display: flex;
-    flex-direction: column;
-    gap: 20px; /* Espaciado entre las secciones */
-    margin-bottom: 30px; /* Espacio entre las secciones */
-    width: 100%;
-    justify-content: center; /* Centra las secciones */
+    justify-content: space-around;
+    padding: 20px;
 }
 
-/* Personalización de la pizza */
-.masa {
-    display: flex;
-    gap: 20px; /* Espacio entre las opciones */
-    justify-content: center; /* Centra las opciones */
-    flex-wrap: wrap; /* Permite que las opciones se acomoden */
+/* Individual pizza or empanada section */
+.pizza-section, .empanadas-section {
+    width: 30%;
+    padding: 10px;
 }
 
-.masa-option {
+.pizza-section h3, .empanadas-section h1 {
     text-align: center;
-    width: 200px; /* Ancho de cada opción */
 }
 
 .masa-option img {
-    width: 100%; /* Asegura que la imagen se ajuste al contenedor */
-    height: auto;
+    width: 100%; /* Ensures images fill the width */
 }
 
-/* Empanadas */
-.empanadas-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.empanada-item {
-    text-align: center;
-    width: 150px; /* Tamaño fijo para cada empanada */
-}
-
-.empanada-item img {
-    width: 100%;
-    height: auto;
-}
-
-/* Eliminar los guiones de la lista de ingredientes */
-.no-bullets {
-    list-style-type: none; /* Elimina los puntos */
-    padding-left: 0; /* Elimina el padding izquierdo */
-}
-
-/* Estilo para los botones */
-.buttons-container {
-    display: flex;
-    justify-content: center; /* Centra los botones */
-    gap: 20px; /* Espacio entre los botones */
-    margin-top: 20px;
-}
-
-.home-button, .promo-button {
-    background-color: orange;
-    color: white;
-    padding: 15px 30px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-}
-
-.home-button:hover, .promo-button:hover {
-    background-color: darkorange;
-}
-
-/* Estilo para el pie de página */
+/* Footer styling */
 footer {
     text-align: center;
-    margin-top: 40px;
     padding: 10px;
-    background-color: #222;
+    background-color: #333;
     color: white;
 }
