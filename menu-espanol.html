@@ -5,8 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú Español - Big Pizza</title>
     <link rel="stylesheet" href="menu.css">
+    <style>
+        /* Clase para la franja blanca con el texto "PIZZAS" */
+        .pizza-title {
+            background-color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 2em;
+            font-weight: bold;
+            color: black;
+            width: 100%; /* Hace que la franja ocupe todo el ancho */
+            box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+        }
+    </style>
 </head>
-<body>
+<body>c
     <header>
         <div class="logo-container">
             <img src="logo.png" alt="Big Pizza Logo" class="logo">
@@ -16,11 +29,13 @@
             <button class="home-button" onclick="window.location.href='index.html'">Inicio</button>
             <button class="promo-button" onclick="window.location.href='https://jessiquinterot.github.io/mi-proyecto/promociones.html'">PROMOCIONES</button>
         </div>
+
+        <!-- Franja blanca con la palabra PIZZAS -->
+        <div class="pizza-title">PIZZAS</div>
     </header>
 
     <!-- Sección de Pizzas -->
     <div class="menu-section">
-        <div class="section-title" id="pizzas-title">PIZZAS</div>
         <div class="pizza-section">
             <h2>ELIGE COMO QUIERES LA MASA</h2>
             <div class="masa">
