@@ -1,15 +1,14 @@
-/* Estilo global */
+/* Fondo negro para toda la página */
 body {
+    background-color: black;
+    color: white;
     margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #000; /* Fondo negro */
-    color: #fff; /* Texto blanco por defecto */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden;
+    font-family: Arial, sans-serif;
 }
 
 /* Contenedor principal */
@@ -17,34 +16,27 @@ body {
     text-align: center;
 }
 
-/* Estilo del logo */
+/* Logo centrado */
 .logo {
-    width: 150px; /* Tamaño del logo */
+    width: 150px; /* Ajusta el tamaño según sea necesario */
     margin-bottom: 20px;
 }
 
-/* Estilo de los botones */
+/* Botones estilizados */
 .buttons button {
-    display: block;
-    width: 250px; /* Ancho fijo para los botones */
-    margin: 10px auto; /* Espaciado entre botones */
-    padding: 15px;
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px 0;
     font-size: 16px;
     font-weight: bold;
-    color: #fff; /* Texto blanco */
-    background-color: #ff9800; /* Naranja */
-    border: none;
-    border-radius: 5px; /* Bordes redondeados */
     cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s;
+    border-radius: 5px;
+    width: 200px; /* Asegura que los botones sean uniformes */
 }
 
-/* Hover y efecto de clic */
+/* Hover para botones */
 .buttons button:hover {
-    background-color: #e67e22; /* Naranja más oscuro al pasar el mouse */
-    transform: scale(1.05); /* Efecto de ampliación */
-}
-
-.buttons button:active {
-    transform: scale(0.95); /* Efecto de clic */
+    background-color: darkorange;
 }
