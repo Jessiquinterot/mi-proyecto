@@ -1,18 +1,9 @@
-function openMenu(language) {
-    switch (language) {
-        case 'es':
-            window.location.href = 'menu-espanol.html'; // Aquí cambiamos 'window.open' por 'window.location.href'
-            break;
-        case 'pt':
-            window.location.href = 'menu-portugues.html'; // Asegúrate de tener este archivo
-            break;
-        case 'en':
-            window.location.href = 'menu-english.html'; // Asegúrate de tener este archivo
-            break;
-        case 'ru':
-            window.location.href = 'menu-ruso.html'; // Asegúrate de tener este archivo
-            break;
-        default:
-            alert('Opción no disponible');
+// Función para redirigir a la página especificada
+function openPage(page) {
+    // Verifica que se haya pasado un parámetro válido y redirige
+    if (page) {
+        window.location.href = page;
+    } else {
+        console.error("No se especificó una página válida.");
     }
 }

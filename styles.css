@@ -1,73 +1,47 @@
-/* Fondo negro para toda la página */
+/* General */
 body {
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
-}
-
-/* Contenedor principal con flexbox para centrar */
-.main-container {
+    background-color: black; /* Fondo negro */
+    font-family: Arial, sans-serif;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    color: white;
 }
 
-/* Logo centrado */
-.logo-container {
-    margin-bottom: 30px;
+/* Contenedor principal */
+.container {
+    text-align: center;
 }
 
+/* Logo */
 .logo {
-    width: 200px; /* Ajusta el tamaño del logo */
-}
-
-/* Título */
-h1 {
-    font-size: 1.5em;
+    width: 200px;
     margin-bottom: 20px;
-    font-weight: bold;
 }
 
-/* Contenedor de botones */
+/* Botones */
 .button-container {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 20px;
+    flex-direction: column; /* Asegura que los botones estén uno debajo del otro */
+    gap: 15px; /* Espaciado entre botones */
 }
 
-/* Estilo para los botones */
-.menu-button {
-    background-color: #ff6600;
-    color: black;
+button {
+    background-color: orange; /* Botones naranja */
+    color: white; /* Texto blanco */
     border: none;
     padding: 15px 30px;
-    font-size: 1.2em;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.menu-button:hover {
-    background-color: #e65c00;
-}
-
-/* Estilo para el botón de promociones */
-.promo-button {
-    padding: 15px 30px;
-    background-color: #ff6600;
-    color: black;
-    font-size: 1.2em;
-    border-radius: 5px;
-    text-decoration: none;
+    font-size: 16px;
     font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
 }
 
-.promo-button:hover {
-    background-color: #e65c00;
+button:hover {
+    background-color: darkorange; /* Cambio de color al pasar el mouse */
+    transform: scale(1.05); /* Efecto de agrandamiento */
 }

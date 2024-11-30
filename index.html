@@ -3,33 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Big Pizza - Menú</title>
+    <title>Big Pizza</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Contenedor principal -->
-    <div class="main-container">
-        <!-- Logo centrado -->
-        <div class="logo-container">
-            <img src="images/logo.png" alt="Logo Big Pizza" class="logo">
-        </div>
+    <div class="container">
+        <!-- Logo -->
+        <img src="logo.png" alt="Big Pizza Logo" class="logo">
 
-        <!-- Título con descripción -->
-        <h1>Disfruta de nuestros deliciosos menús en diferentes idiomas y describe nuestras ofertas exclusivas.</h1>
-
-        <!-- Botones para los menús -->
+        <!-- Botones -->
         <div class="button-container">
-            <button class="menu-button" onclick="openMenu('es')">Menú en Español</button>
-            <button class="menu-button" onclick="openMenu('pt')">Menú em português</button>
-            <button class="menu-button" onclick="openMenu('en')">Menu in English</button>
-            <button class="menu-button" onclick="openMenu('ru')">Меню на русском</button>
-        </div>
-
-        <!-- Botón de promociones -->
-        <div class="promotions-container">
-            <a href="promociones.html" class="promo-button">PROMOCIONES</a>
+            <button onclick="openPage('promociones.html')">PROMOCIONES</button>
+            <button onclick="openPage('menu-espanol.html')">MENÚ EN ESPAÑOL</button>
+            <button onclick="openPage('menu-portugues.html')">MENÚ EM PORTUGUÊS</button>
+            <button onclick="openPage('menu-ingles.html')">MENU IN ENGLISH</button>
+            <button onclick="openPage('menu-ruso.html')">МЕНЮ НА РУССКОМ</button>
         </div>
     </div>
 </body>
 </html>
+
