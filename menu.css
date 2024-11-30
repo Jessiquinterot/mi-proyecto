@@ -45,15 +45,27 @@ button:hover {
     padding: 20px;
 }
 
+/* Títulos con fondo blanco y texto negro */
+.section-title {
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Sección Pizzas */
 .pizza-section {
     width: 45%;
     padding: 10px;
 }
 
-.pizza-section h1, .empanadas-section h1 {
+.pizza-section h1 {
     text-align: center;
 }
 
+/* Sección de Pizzas Especiales y Personaliza tu Pizza */
 .right-side {
     display: flex;
     flex-direction: column;
@@ -97,8 +109,8 @@ button:hover {
 }
 
 .empanada-item img {
-    width: 150px; /* Tamaño uniforme */
-    height: auto;
+    width: 482px; /* Tamaño uniforme para las empanadas */
+    height: 488px; /* Tamaño uniforme para las empanadas */
 }
 
 /* Estilo del pie de página */
