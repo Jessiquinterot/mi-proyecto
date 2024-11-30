@@ -53,6 +53,8 @@ button:hover {
     padding: 10px 0;
     width: 100%;
     margin-top: 10px;
+    font-weight: bold;
+    font-size: 32px;
 }
 
 /* Sección Pizzas */
@@ -109,8 +111,8 @@ button:hover {
 }
 
 .empanada-item img {
-    width: 482px; /* Tamaño uniforme para las empanadas */
-    height: 488px; /* Tamaño uniforme para las empanadas */
+    width: 150px; /* Tamaño pequeño uniforme */
+    height: 150px; /* Tamaño pequeño uniforme */
 }
 
 /* Estilo del pie de página */
