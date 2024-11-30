@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu em Português - Big Pizza</title>
+    <link rel="stylesheet" href="menu.css">
+    <style>
+        /* Classe para a faixa branca com o texto "PIZZAS" */
+        .pizza-title {
+            background-color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 20px;
+        }
+
+        /* Estilo para botões */
+        .home-button, .promo-button {
+            font-size: 1.2em;
+            color: white;
+            background-color: #f39c12;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        /* Ajuste no tamanho da imagem da massa */
+        .masa-option img {
+            width: 356px;
+            height: 232px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo Big Pizza" class="logo">
+        </div>
+        
+        <div class="buttons-container">
+            <button class="home-button" onclick="window.location.href='index.html'">INÍCIO</button>
+            <button class="promo-button" onclick="window.location.href='https://jessiquinterot.github.io/mi-proyecto/promociones.html'">PROMOÇÕES</button>
+        </div>
+
+        <!-- Faixa branca com a palavra PIZZAS -->
+        <div class="pizza-title">PIZZAS</div>
+    </header>
+
+    <!-- Seção de Pizzas -->
+    <div class="menu-section">
+        <div class="pizza-section">
+            <h2 style="color: orange; text-align: center;">ESCOLHA SUA MASSA</h2>
+            <div class="masa">
+                <div class="masa-option">
+                    <img src="images/piedra.jpg" alt="Massa Assada na Pedra">
+                    <h3>ASSADA NA PEDRA (Fina e Crocante)</h3>
+                </div>
+                <div class="masa-option">
+                    <img src="images/molde.jpg" alt="Massa Assada no Molde">
+                    <h3> MOLDE (Grossa e Extra Queijo)</h3>
+                </div>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="pizza-specials-section">
+                <div class="orange-box">
+                    <h2>PIZZAS ESPECIAIS (Grande ou Individual)</h2>
+                    <ul class="no-bullets" style="font-size: 25px;">
+                        <li>Mussarela</li>
+                        <li>Fugazzeta (Cebola)</li>
+                        <li>Presunto e Pimentão</li>
+                        <li>Cheddar e Bacon</li>
+                        <li>Napolitana com Presunto (tomate e alho)</li>
+                        <li>Peperoni</li>
+                        <li>Presunto com Pimentão e Ovo</li>
+                        <li>Fugazzeta(Cebola) com Presunto</li>
+                        <li>Presunto com Pimentão</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pizza-customize-section">
+                <div class="orange-box">
+                    <h2>ADICIONE SEUS INGREDIENTES FAVORITOS</h2>
+                    <ul class="no-bullets" style="font-size: 25px;">
+                        <li>Ovo</li>
+                        <li>Tomate</li>
+                        <li>Pimentão</li>
+                        <li>Azeitonas</li>
+                        <li>Queijo Extra</li>
+                        <li>Presunto</li>
+                        <li>Peperoni</li>
+                        <li>Cheddar</li>
+                        <li>Bacon</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção de Empanadas -->
+    <div class="empanadas-section">
+        <div class="section-title" id="empanadas-title">EMPANADAS</div>
+        <div class="empanadas-list">
+            <div class="empanada-item">
+                <h4>CARNE SUAVE</h4>
+                <img src="images/empanada1.jpg" alt="Empanada de Carne">
+            </div>
+            <div class="empanada-item">
+                <h4>PRESUNTO E QUEIJO</h4>
+                <img src="images/empanada2.jpg" alt="Empanada de Presunto e Queijo">
+            </div>
+            <div class="empanada-item">
+                <h4>CARNE PICANTE</h4>
+                <img src="images/empanada3.jpg" alt="Empanada de Carne Apimentado">
+            </div>
+            <div class="empanada-item">
+                <h4>FRANGO</h4>
+                <img src="images/empanada4.jpg" alt="Empanada de Frango">
+            </div>
+            <div class="empanada-item">
+                <h4>HAMBÚRGUER</h4>
+                <img src="images/empanada5.jpg" alt="Empanada de Cheeseburguer">
+            </div>
+            <div class="empanada-item">
+                <h4>LINGUIÇA CANTIMPALO</h4>
+                <img src="images/empanada6.jpg" alt="Empanada de Peperoni">
+            </div>
+            <div class="empanada-item">
+                <h4>CAPRESE</h4>
+                <img src="images/empanada7.jpg" alt="Empanada Caprese(queijo, tomate e manjericão)">
+            </div>
+            <div class="empanada-item">
+                <h4>MILHO</h4>
+                <img src="images/empanada8.jpg" alt="Empanada de Milho">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Servicios Madeirense | Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
