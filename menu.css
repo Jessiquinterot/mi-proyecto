@@ -89,6 +89,29 @@ body {
     padding-left: 0; /* Elimina el padding izquierdo */
 }
 
+/* Estilo para los botones */
+.buttons-container {
+    display: flex;
+    justify-content: center; /* Centra los botones */
+    gap: 20px; /* Espacio entre los botones */
+    margin-top: 20px;
+}
+
+.home-button, .promo-button {
+    background-color: orange;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.home-button:hover, .promo-button:hover {
+    background-color: darkorange;
+}
+
 /* Estilo para el pie de página */
 footer {
     text-align: center;
