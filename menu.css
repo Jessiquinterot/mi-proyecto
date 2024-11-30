@@ -1,0 +1,99 @@
+/* Fondo y color de texto */
+body {
+    background-color: black; /* Fondo negro */
+    color: white; /* Color de texto blanco */
+    font-family: Arial, sans-serif; /* Fuente predeterminada */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea todo desde la parte superior */
+    height: 100vh;
+    text-align: center;
+    flex-direction: column;
+}
+
+/* Contenedor principal para centrar el contenido del menú */
+.menu-container {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centrado horizontal */
+    padding-top: 20px;
+    width: 100%;
+    max-width: 900px; /* Evita que se estire demasiado */
+    margin-top: 20px; /* Agrega espacio desde la parte superior */
+}
+
+/* Estilos para el logo */
+.menu-logo-container {
+    margin-bottom: 20px;
+}
+
+.menu-logo {
+    width: 150px;
+    height: auto;
+}
+
+/* Secciones de menú */
+.menu-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaciado entre las secciones */
+    margin-bottom: 30px; /* Espacio entre las secciones */
+    width: 100%;
+}
+
+.pizza-section, .empanadas-section {
+    margin-bottom: 30px;
+}
+
+/* Personalización de la pizza */
+.masa {
+    display: flex;
+    gap: 20px; /* Espacio entre las opciones */
+    justify-content: center; /* Centra las opciones */
+    flex-wrap: wrap; /* Permite que las opciones se acomoden */
+}
+
+.masa-option {
+    text-align: center;
+    width: 200px; /* Ancho de cada opción */
+}
+
+.masa-option img {
+    width: 100%; /* Asegura que la imagen se ajuste al contenedor */
+    height: auto;
+}
+
+/* Empanadas */
+.empanadas-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.empanada-item {
+    text-align: center;
+    width: 150px; /* Tamaño fijo para cada empanada */
+}
+
+.empanada-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Eliminar los guiones de la lista de ingredientes */
+.no-bullets {
+    list-style-type: none; /* Elimina los puntos */
+    padding-left: 0; /* Elimina el padding izquierdo */
+}
+
+/* Estilo para el pie de página */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #222;
+    color: white;
+}
