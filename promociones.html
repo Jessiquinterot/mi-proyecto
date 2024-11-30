@@ -5,8 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promociones</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilo para el botón "Inicio" */
+        .inicio-button {
+            position: fixed; /* Fija el botón para que siempre esté visible */
+            top: 10px; /* Espaciado desde la parte superior */
+            left: 10px; /* Espaciado desde la parte izquierda */
+            background-color: orange; /* Color de fondo */
+            color: white; /* Color de texto */
+            border: none; /* Sin bordes */
+            padding: 10px 20px; /* Relleno interno */
+            font-size: 16px; /* Tamaño de fuente */
+            border-radius: 5px; /* Bordes redondeados */
+            cursor: pointer; /* Cambia el cursor a mano */
+            z-index: 1000; /* Asegura que esté encima de las imágenes */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+        }
+
+        .inicio-button:hover {
+            background-color: #e67e22; /* Color más oscuro al pasar el cursor */
+        }
+    </style>
 </head>
 <body>
+    <!-- Botón Inicio -->
+    <button class="inicio-button" onclick="window.location.href='index.html'">Inicio</button>
+
     <!-- Contenedor principal para la presentación de diapositivas -->
     <div class="slideshow-container">
         <!-- Cada div con la clase 'slide' es una imagen de la presentación -->
