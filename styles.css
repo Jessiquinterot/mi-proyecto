@@ -53,3 +53,58 @@ body {
     background-color: darkorange; /* Naranja oscuro al hacer hover */
 }
 
+
+/* Asegúrate de que las listas no tengan puntos */
+.no-bullets {
+    list-style-type: none; /* Elimina los puntos */
+    padding-left: 0; /* Elimina el padding izquierdo */
+}
+
+.menu-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaciado entre las secciones */
+}
+
+.pizza-section, .empanadas-section {
+    margin-bottom: 30px; /* Añade espacio entre las secciones */
+}
+
+.masa {
+    display: flex;
+    gap: 20px;
+}
+
+.masa-option {
+    text-align: center;
+    width: 200px;
+}
+
+.masa-option img {
+    width: 100%; /* Ajusta el tamaño de las imágenes */
+    height: auto;
+}
+
+.empanadas-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.empanada-item {
+    text-align: center;
+    width: 150px;
+}
+
+.empanada-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Añadir algo de espacio en el pie de página */
+footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+
