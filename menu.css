@@ -50,6 +50,10 @@ button:hover {
     padding: 10px;
 }
 
+.pizza-section h1, .empanadas-section h1 {
+    text-align: center;
+}
+
 .right-side {
     display: flex;
     flex-direction: column;
@@ -93,7 +97,7 @@ button:hover {
 }
 
 .empanada-item img {
-    width: 100%;
+    width: 150px; /* Tamaño uniforme */
     height: auto;
 }
 
