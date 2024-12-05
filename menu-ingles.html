@@ -33,7 +33,7 @@
         }
         .translation {
             display: block;
-            font-size: 0.5em;
+            font-size: 0.7em;
             color: rgba(136, 135, 135, 0.8);
         }
         .empanada-item h4 {
@@ -44,10 +44,17 @@
             margin-bottom: 10px;
         }
         .empanada-item img {
-            width: 200px;
-            height: auto;
+            width: 200px; /* Asegura un ancho uniforme */
+            height: 200px; /* Asegura una altura uniforme */
+            object-fit: cover; /* Mantiene proporciones dentro del tamaño especificado */
             display: block;
             margin: 0 auto;
+        }
+        .empanadas-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 20px; /* Espaciado entre las imágenes */
         }
     </style>
 </head>
@@ -145,7 +152,7 @@
                 <img src="images/empanada5.jpg" alt="Cheeseburger Empanada">
             </div>
             <div class="empanada-item">
-                <h4>CANTIMPALO SAUSAGE</h4>
+                <h4>PEPERONI</h4>
                 <span class="translation">(Cantimpalo)</span>
                 <img src="images/empanada6.jpg" alt="Cantimpalo Sausage Empanada">
             </div>
