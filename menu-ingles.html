@@ -6,7 +6,6 @@
     <title>English Menu - Big Pizza</title>
     <link rel="stylesheet" href="menu.css">
     <style>
-        /* Class for the white stripe with the text "PIZZAS" */
         .pizza-title {
             background-color: white;
             text-align: center;
@@ -18,8 +17,6 @@
             box-sizing: border-box;
             margin-top: 20px;
         }
-
-        /* Style for buttons */
         .home-button, .promo-button {
             font-size: 1.2em;
             color: white;
@@ -29,12 +26,28 @@
             margin: 5px;
             cursor: pointer;
         }
-
-        /* Pizza image size adjustment */
         .masa-option img {
             width: 356px;
             height: 232px;
             object-fit: cover;
+        }
+        .translation {
+            display: block;
+            font-size: 0.5em;
+            color: rgba(136, 135, 135, 0.8);
+        }
+        .empanada-item h4 {
+            margin: 0;
+        }
+        .empanada-item .translation {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .empanada-item img {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -45,100 +58,105 @@
         </div>
         
         <div class="buttons-container">
-            <button class="home-button" onclick="window.location.href='index.html'">HOME</button>
-            <button class="promo-button" onclick="window.location.href='https://jessiquinterot.github.io/mi-proyecto/promociones.html'">PROMOTIONS</button>
+            <button class="home-button" onclick="window.location.href='index.html'">HOME (Inicio)</button>
+            <button class="promo-button" onclick="window.location.href='https://jessiquinterot.github.io/mi-proyecto/promociones.html'">PROMOTIONS (Promociones)</button>
         </div>
 
-        <!-- White stripe with the word PIZZAS -->
         <div class="pizza-title">PIZZAS</div>
     </header>
 
-    <!-- Pizza Section -->
     <div class="menu-section">
         <div class="pizza-section">
             <h2 style="color: orange; text-align: center;">CHOOSE YOUR BASE</h2>
             <div class="masa">
                 <div class="masa-option">
                     <img src="images/piedra.jpg" alt="Stone-Baked Crust">
-                    <h3>STONE-BASE (Thin and Crunchy)</h3>
+                    <h3>STONE-BASE (Thin and Crunchy) <span class="translation">(Piedra)</span></h3>
                 </div>
                 <div class="masa-option">
                     <img src="images/molde.jpg" alt="Pan-Baked Crust">
-                    <h3>HIGH BASE (Thick Base and Extra Cheese)</h3>
+                    <h3>HIGH BASE (Thick Base and Extra Cheese) <span class="translation">(Molde)</span></h3>
                 </div>
             </div>
         </div>
         <div class="right-side">
             <div class="pizza-specials-section">
                 <div class="orange-box">
-                    <h2>SPECIAL PIZZAS (Large or Individual)</h2>
+                    <h2>SPECIAL PIZZAS (Large or Individual) <span class="translation">(Pizzas especiales: grandes o individuales)</span></h2>
                     <ul class="no-bullets" style="font-size: 25px;">
-                        <li>Mozzarella</li>
-                        <li>Onion</li>
-                        <li>Ham and Bell Pepper</li>
-                        <li>Cheddar and Bacon</li>
-                        <li>Napolitana with Ham (tomato and garlic)</li>
-                        <li>Peperoni</li>
-                        <li>Ham with Bell Pepper and Egg</li>
-                        <li>Onion with Ham</li>
-                        <li>Ham with Bell Pepper</li>
+                        <li>Mozzarella <span class="translation">(Mozzarella)</span></li>
+                        <li>Onion <span class="translation">(Cebolla)</span></li>
+                        <li>Ham and Bell Pepper <span class="translation">(Jamón y Morron)</span></li>
+                        <li>Cheddar and Bacon <span class="translation">(Cheddar y Bacon)</span></li>
+                        <li>Napolitana with Ham (tomato and garlic) <span class="translation">(Napolitana con jamón)</span></li>
+                        <li>Peperoni <span class="translation">(Calabresa)</span></li>
+                        <li>Ham with Bell Pepper and Egg <span class="translation">(Jamón con Morron y huevo)</span></li>
+                        <li>Onion with Ham <span class="translation">(Fugazzeta con jamón)</span></li>
+                        <li>Ham with Bell Pepper <span class="translation">(Jamón con Morron)</span></li>
                     </ul>
                 </div>
             </div>
 
             <div class="pizza-customize-section">
                 <div class="orange-box">
-                    <h2>ADD YOUR FAVORITE EXTRA TOPPINGS</h2>
+                    <h2>ADD YOUR FAVORITE EXTRA TOPPINGS <span class="translation">(Añade tus ingredientes favoritos)</span></h2>
                     <ul class="no-bullets" style="font-size: 25px;">
-                        <li>Egg</li>
-                        <li>Tomato</li>
-                        <li>Bell Pepper</li>
-                        <li>Olives</li>
-                        <li>Extra Cheese</li>
-                        <li>Ham</li>
-                        <li>Peperoni</li>
-                        <li>Cheddar</li>
-                        <li>Bacon</li>
+                        <li>Egg <span class="translation">(Huevo)</span></li>
+                        <li>Tomato <span class="translation">(Tomate)</span></li>
+                        <li>Bell Pepper <span class="translation">(Morron)</span></li>
+                        <li>Olives <span class="translation">(Aceitunas)</span></li>
+                        <li>Extra Muzzarella <span class="translation">(Queso extra)</span></li>
+                        <li>Ham <span class="translation">(Jamón)</span></li>
+                        <li>Peperoni <span class="translation">(Longaniza)</span></li>
+                        <li>Cheddar <span class="translation">(Cheddar)</span></li>
+                        <li>Bacon <span class="translation">(Tocino)</span></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Empanadas Section -->
     <div class="empanadas-section">
         <div class="section-title" id="empanadas-title">EMPANADAS</div>
         <div class="empanadas-list">
             <div class="empanada-item">
                 <h4>MILD BEEF</h4>
+                <span class="translation">(Carne suave)</span>
                 <img src="images/empanada1.jpg" alt="Beef Empanada">
             </div>
             <div class="empanada-item">
                 <h4>HAM AND CHEESE</h4>
+                <span class="translation">(Jamón y queso)</span>
                 <img src="images/empanada2.jpg" alt="Ham and Cheese Empanada">
             </div>
             <div class="empanada-item">
                 <h4>SPICY BEEF</h4>
+                <span class="translation">(Carne picante)</span>
                 <img src="images/empanada3.jpg" alt="Spicy Beef Empanada">
             </div>
             <div class="empanada-item">
                 <h4>CHICKEN</h4>
+                <span class="translation">(Pollo)</span>
                 <img src="images/empanada4.jpg" alt="Chicken Empanada">
             </div>
             <div class="empanada-item">
                 <h4>CHEESEBURGER</h4>
+                <span class="translation">(Cheeseburger)</span>
                 <img src="images/empanada5.jpg" alt="Cheeseburger Empanada">
             </div>
             <div class="empanada-item">
                 <h4>CANTIMPALO SAUSAGE</h4>
-                <img src="images/empanada6.jpg" alt="Peperoni Empanada">
+                <span class="translation">(Cantimpalo)</span>
+                <img src="images/empanada6.jpg" alt="Cantimpalo Sausage Empanada">
             </div>
             <div class="empanada-item">
                 <h4>CAPRESE</h4>
+                <span class="translation">(Caprese)</span>
                 <img src="images/empanada7.jpg" alt="Caprese Empanada">
             </div>
             <div class="empanada-item">
                 <h4>CORN</h4>
+                <span class="translation">(Humita)</span>
                 <img src="images/empanada8.jpg" alt="Corn Empanada">
             </div>
         </div>
