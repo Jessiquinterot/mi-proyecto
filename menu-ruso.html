@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Меню на русском - Большая Пицца</title>
+    <title>Меню на русском языке - Большая Пицца</title>
     <link rel="stylesheet" href="menu.css">
     <style>
-        /* Clase para la franja blanca con el texto "PIZZAS" */
         .pizza-title {
             background-color: white;
             text-align: center;
@@ -14,27 +13,48 @@
             font-size: 2em;
             font-weight: bold;
             color: #333;
-            width: 100%; /* Hace que la franja ocupe todo el ancho */
-            box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
-            margin-top: 20px; /* Espacio entre los botones y la franja */
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 20px;
         }
-
-        /* Estilo para los botones */
         .home-button, .promo-button {
-            font-size: 1.2em; /* Aumentar tamaño de la letra */
-            color: white; /* Letra blanca */
-            background-color: #f39c12; /* Color de fondo de los botones */
+            font-size: 1.2em;
+            color: white;
+            background-color: #f39c12;
             border: none;
             padding: 10px 20px;
             margin: 5px;
             cursor: pointer;
         }
-
-        /* Ajuste de tamaño de la imagen de la pizza */
         .masa-option img {
-            width: 356px; /* Ancho de la imagen */
-            height: 232px; /* Alto de la imagen */
-            object-fit: cover; /* Asegura que la imagen se ajuste sin distorsionarse */
+            width: 356px;
+            height: 232px;
+            object-fit: cover;
+        }
+        .translation {
+            display: block;
+            font-size: 0.9em;
+            color: rgba(136, 135, 135, 0.8);
+        }
+        .empanada-item h4 {
+            margin: 0;
+        }
+        .empanada-item .translation {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .empanada-item img {
+            width: 200px; /* Обеспечивает единообразный размер */
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+        }
+        .empanadas-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 20px;
         }
     </style>
 </head>
@@ -49,97 +69,102 @@
             <button class="promo-button" onclick="window.location.href='https://jessiquinterot.github.io/mi-proyecto/promociones.html'">АКЦИИ</button>
         </div>
 
-        <!-- Franja blanca con la palabra PIZZAS -->
         <div class="pizza-title">ПИЦЦЫ</div>
     </header>
 
-    <!-- Sección de Pizzas -->
     <div class="menu-section">
         <div class="pizza-section">
-            <h2 style="color: orange; text-align: center;">ВЫБЕРИТЕ ВИД ТЕСТА</h2>
+            <h2 style="color: orange; text-align: center;">ВЫБЕРИТЕ СВОЮ ОСНОВУ</h2>
             <div class="masa">
                 <div class="masa-option">
-                    <img src="images/piedra.jpg" alt="Тесто на Камне">
-                    <h3>НА КАМНЕ (Тонкое и Хрустящее тесто)</h3>
+                    <img src="images/piedra.jpg" alt="Тесто на камне">
+                    <h3>КАМЕННАЯ ОСНОВА (Тонкая и Хрустящая) <span class="translation">(Пьедра)</span></h3>
                 </div>
                 <div class="masa-option">
-                    <img src="images/molde.jpg" alt="Тесто в Форме">
-                    <h3>В ФОРМЕ (Толстое тесто с БОЛЬШЕ сыра)</h3>
+                    <img src="images/molde.jpg" alt="Толстое тесто">
+                    <h3>ТОЛСТАЯ ОСНОВА (Сыра больше) <span class="translation">(Мольде)</span></h3>
                 </div>
             </div>
         </div>
         <div class="right-side">
             <div class="pizza-specials-section">
                 <div class="orange-box">
-                    <h2>СПЕЦИАЛЬНЫЕ ПИЦЦЫ (Большие или Индивидуальные)</h2>
+                    <h2>ОСОБЫЕ ПИЦЦЫ (Большие или индивидуальные) <span class="translation">(Специальные пиццы: большие или индивидуальные)</span></h2>
                     <ul class="no-bullets" style="font-size: 25px;">
-                        <li>Моцарелла</li>
-                        <li>Фугаззета (лук)</li>
-                        <li>Ветчина и Перец</li>
-                        <li>Чеддер и Бекон</li>
-                        <li>Неаполитанская с Ветчиной (помидоры и чеснок)</li>
-                        <li>Пепперони</li>
-                        <li>Ветчина с Перцем и Яйцом</li>
-                        <li>ФФугаззета (лук) с Ветчиной</li>
-                        <li>Ветчина с Перцем</li>
+                        <li>Моцарелла <span class="translation">(Mozzarella)</span></li>
+                        <li>Лук <span class="translation">(Cebolla)</span></li>
+                        <li>Ветчина и перец <span class="translation">(Jamón y Morron)</span></li>
+                        <li>Чеддер и бекон <span class="translation">(Cheddar y Bacon)</span></li>
+                        <li>Неаполитанская с ветчиной (Томаты и чеснок) <span class="translation">(Napolitana con jamón)</span></li>
+                        <li>Колбаса <span class="translation">(Calabresa)</span></li>
+                        <li>Ветчина с перцем и яйцом <span class="translation">(Jamón con Morron y huevo)</span></li>
+                        <li>Лук с ветчиной <span class="translation">(Fugazzeta con jamón)</span></li>
+                        <li>Ветчина с перцем <span class="translation">(Jamón con Morron)</span></li>
                     </ul>
                 </div>
             </div>
 
             <div class="pizza-customize-section">
                 <div class="orange-box">
-                    <h2>ДОБАВЬТЕ СВОИ ЛЮБИМЫЕ ДОПОЛНИТЕЛЬНЫЕ ИНГРЕДИЕНТЫ</h2>
+                    <h2>ДОБАВЬТЕ СВОИ ЛЮБИМЫЕ ИНГРЕДИЕНТЫ <span class="translation">(Добавьте свои любимые ингредиенты)</span></h2>
                     <ul class="no-bullets" style="font-size: 25px;">
-                        <li>Яйцо</li>
-                        <li>Помидоры</li>
-                        <li>Перец</li>
-                        <li>Оливки</li>
-                        <li>Дополнительный сыр</li>
-                        <li>Ветчина</li>
-                        <li>Колбаса</li>
-                        <li>Чеддер</li>
-                        <li>Бекон</li>
+                        <li>Яйцо <span class="translation">(Huevo)</span></li>
+                        <li>Томат <span class="translation">(Tomate)</span></li>
+                        <li>Перец <span class="translation">(Morron)</span></li>
+                        <li>Оливки <span class="translation">(Aceitunas)</span></li>
+                        <li>Дополнительная моцарелла <span class="translation">(Queso extra)</span></li>
+                        <li>Ветчина <span class="translation">(Jamón)</span></li>
+                        <li>Колбаса <span class="translation">(Longaniza)</span></li>
+                        <li>Чеддер <span class="translation">(Cheddar)</span></li>
+                        <li>Бекон <span class="translation">(Tocino)</span></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Sección de Empanadas -->
     <div class="empanadas-section">
         <div class="section-title" id="empanadas-title">ЭМПАНАДЫ</div>
         <div class="empanadas-list">
             <div class="empanada-item">
-                <h4>НЕЖНОЕ МЯСО</h4>
-                <img src="images/empanada1.jpg" alt="Эмпанада с Нежным Мясом">
+                <h4>МЯСО НЕОСТРОЕ</h4>
+                <span class="translation">(Carne suave)</span>
+                <img src="images/empanada1.jpg" alt="Эмпанада с неострым мясом">
             </div>
             <div class="empanada-item">
                 <h4>ВЕТЧИНА И СЫР</h4>
+                <span class="translation">(Jamón y queso)</span>
                 <img src="images/empanada2.jpg" alt="Эмпанада с ветчиной и сыром">
             </div>
             <div class="empanada-item">
                 <h4>ОСТРОЕ МЯСО</h4>
-                <img src="images/empanada3.jpg" alt="Эмпанада с Острым Мясом">
+                <span class="translation">(Carne picante)</span>
+                <img src="images/empanada3.jpg" alt="Эмпанада с острым мясом">
             </div>
             <div class="empanada-item">
                 <h4>КУРИЦА</h4>
-                <img src="images/empanada4.jpg" alt="куриная эмпанада">
+                <span class="translation">(Pollo)</span>
+                <img src="images/empanada4.jpg" alt="Эмпанада с курицей">
             </div>
             <div class="empanada-item">
                 <h4>ЧИЗБУРГЕР</h4>
-                <img src="images/empanada5.jpg" alt="Эмпанада Чизбургер">
+                <span class="translation">(Cheeseburger)</span>
+                <img src="images/empanada5.jpg" alt="Эмпанада с чизбургером">
             </div>
             <div class="empanada-item">
-                <h4>КАНТИМПАЛО</h4>
-                <img src="images/empanada6.jpg" alt="Пепперони Эмпанада">
+                <h4>КОЛБАСА</h4>
+                <span class="translation">(Cantimpalo)</span>
+                <img src="images/empanada6.jpg" alt="Эмпанада с колбасой">
             </div>
             <div class="empanada-item">
                 <h4>КАПРЕЗЕ</h4>
-                <img src="images/empanada7.jpg" alt="Капрезе эмпанада (сыр, помидоры и базилик)">
+                <span class="translation">(Caprese)</span>
+                <img src="images/empanada7.jpg" alt="Эмпанада Капрезе">
             </div>
             <div class="empanada-item">
-                <h4>ХУМИТА</h4>
-                <img src="images/empanada8.jpg" alt="кукурузная эмпанада">
+                <h4>КУКУРУЗА</h4>
+                <span class="translation">(Humita)</span>
+                <img src="images/empanada8.jpg" alt="Эмпанада с кукурузой">
             </div>
         </div>
     </div>
