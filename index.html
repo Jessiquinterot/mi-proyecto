@@ -2,47 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.2">
+    <title>Big Pizza</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-        button {
-            font-size: 1.2em;
+        .fullscreen-button {
+            position: fixed;
+            top: 10px;
+            right: 10px;
             padding: 10px 20px;
-            margin: 10px;
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
+            z-index: 1000;
         }
     </style>
-    <script>
-        // Activar pantalla completa al hacer clic en cualquier botón
-        function enterFullscreen() {
-            const docEl = document.documentElement;
-            if (docEl.requestFullscreen) docEl.requestFullscreen();
-            else if (docEl.mozRequestFullScreen) docEl.mozRequestFullScreen();
-            else if (docEl.webkitRequestFullscreen) docEl.webkitRequestFullscreen();
-            else if (docEl.msRequestFullscreen) docEl.msRequestFullscreen();
-        }
-
-        // Salir de pantalla completa
-        function exitFullscreen() {
-            if (document.exitFullscreen) document.exitFullscreen();
-            else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
-            else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
-            else if (document.msExitFullscreen) document.msExitFullscreen();
-        }
-    </script>
 </head>
 <body>
-    <h1>Página Principal</h1>
-    <button onclick="enterFullscreen(); window.location.href='promociones.html';">Ir a Promociones</button>
-    <button onclick="enterFullscreen(); window.location.href='menu_espanol.html';">Ir al Menú Español</button>
-    <button onclick="exitFullscreen();">Salir de Pantalla Completa</button>
-    <button class="menu-button" onclick="window.location.href='menu-portugues.html'">MENÚ EM PORTUGUÊS</button>
-    <button class="menu-button" onclick="window.location.href='menu-ingles.html'">MENU IN ENGLISH</button>
-    <button class="menu-button" onclick="window.location.href='menu-ruso.html'">МЕНЮ НА РУССКОМ</button>
+    <div class="main-container">
+        <!-- Contenedor del logo -->
+        <div class="logo-container">
+            <img src="logo.png" alt="Big Pizza Logo" class="logo">
+        </div>
+
+        <!-- Contenedor de botones -->
+        <div class="button-container">
+            <button class="promo-button" onclick="window.location.href='promociones.html'">PROMOCIONES</button>
+            <button class="menu-button" onclick="window.location.href='menu-espanol.html'">MENÚ EN ESPAÑOL</button>
+            <button class="menu-button" onclick="window.location.href='menu-portugues.html'">MENÚ EM PORTUGUÊS</button>
+            <button class="menu-button" onclick="window.location.href='menu-ingles.html'">MENU IN ENGLISH</button>
+            <button class="menu-button" onclick="window.location.href='menu-ruso.html'">МЕНЮ НА РУССКОМ</button>
+        </div>
+    </div>
+
+    <!-- Botón de pantalla completa -->
+    <button class="fullscreen-button" onclick="toggleFullscreen()">Pantalla Completa</button>
+
+    <script>
+        function toggleFullscreen() {
+            const doc = document.documentElement;
+            if (!document.fullscreenElement) {
+                doc.requestFullscreen().catch(err => {
+                    console.error(`Error attempting to enable fullscreen mode: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+    </script>
 </body>
 </html>
