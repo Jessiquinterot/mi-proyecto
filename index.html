@@ -3,49 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Big Pizza</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Inicio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
     <script>
-        // Función para alternar el estado de pantalla completa
-        function toggleFullscreen() {
-            if (!document.fullscreenElement) {
-                document.documentElement.requestFullscreen(); // Entra en pantalla completa
-                document.getElementById('fullscreen-button').innerText = 'Salir de pantalla completa';
-            } else {
-                document.exitFullscreen(); // Sale de pantalla completa
-                document.getElementById('fullscreen-button').innerText = 'Expandir pantalla';
-            }
+        // Activar pantalla completa al hacer clic en cualquier botón
+        function enterFullscreen() {
+            const docEl = document.documentElement;
+            if (docEl.requestFullscreen) docEl.requestFullscreen();
+            else if (docEl.mozRequestFullScreen) docEl.mozRequestFullScreen();
+            else if (docEl.webkitRequestFullscreen) docEl.webkitRequestFullscreen();
+            else if (docEl.msRequestFullscreen) docEl.msRequestFullscreen();
         }
 
-        // Cambiar el texto del botón según el estado de pantalla completa al cargar la página
-        document.addEventListener('fullscreenchange', () => {
-            const button = document.getElementById('fullscreen-button');
-            if (document.fullscreenElement) {
-                button.innerText = 'Salir de pantalla completa';
-            } else {
-                button.innerText = 'Expandir pantalla';
-            }
-        });
+        // Salir de pantalla completa
+        function exitFullscreen() {
+            if (document.exitFullscreen) document.exitFullscreen();
+            else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
+            else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+            else if (document.msExitFullscreen) document.msExitFullscreen();
+        }
     </script>
 </head>
 <body>
-    <div class="main-container">
-        <!-- Botón para alternar pantalla completa -->
-        <button id="fullscreen-button" style="position: absolute; top: 10px; right: 10px;" onclick="toggleFullscreen()">Expandir pantalla</button>
-
-        <!-- Contenedor del logo -->
-        <div class="logo-container">
-            <img src="logo.png" alt="Big Pizza Logo" class="logo">
-        </div>
-
-        <!-- Contenedor de botones -->
-        <div class="button-container">
-            <button class="promo-button" onclick="window.location.href='promociones.html?fullscreen=true'">PROMOCIONES</button>
-            <button class="menu-button" onclick="window.location.href='menu-espanol.html'">MENÚ EN ESPAÑOL</button>
-            <button class="menu-button" onclick="window.location.href='menu-portugues.html'">MENÚ EM PORTUGUÊS</button>
-            <button class="menu-button" onclick="window.location.href='menu-ingles.html'">MENU IN ENGLISH</button>
-            <button class="menu-button" onclick="window.location.href='menu-ruso.html'">МЕНЮ НА РУССКОМ</button>
-        </div>
-    </div>
+    <h1>Página Principal</h1>
+    <button onclick="enterFullscreen(); window.location.href='promociones.html';">Ir a Promociones</button>
+    <button onclick="enterFullscreen(); window.location.href='menu_espanol.html';">Ir al Menú Español</button>
+    <button onclick="exitFullscreen();">Salir de Pantalla Completa</button>
+    <button class="menu-button" onclick="window.location.href='menu-portugues.html'">MENÚ EM PORTUGUÊS</button>
+    <button class="menu-button" onclick="window.location.href='menu-ingles.html'">MENU IN ENGLISH</button>
+    <button class="menu-button" onclick="window.location.href='menu-ruso.html'">МЕНЮ НА РУССКОМ</button>
 </body>
 </html>
