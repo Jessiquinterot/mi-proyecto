@@ -69,6 +69,14 @@
                 }
             }
         }
+
+        // Función para simular el clic automáticamente después de 1 segundo
+        window.onload = function() {
+            setTimeout(function() {
+                // Simula el clic en el botón de pantalla completa
+                document.querySelector('.fullscreen-button').click();
+            }, 1000); // 1000ms = 1 segundo
+        }
     </script>
 </head>
 <body>
