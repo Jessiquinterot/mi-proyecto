@@ -39,48 +39,7 @@
         }
     </style>
 
-<script>
-    // Función para activar el modo pantalla completa
-    function toggleFullScreen() {
-        if (!document.fullscreenElement &&    // Si no estamos en pantalla completa
-            !document.mozFullScreenElement && // Firefox
-            !document.webkitFullscreenElement && // Chrome, Safari
-            !document.msFullscreenElement) { // IE/Edge
-            // Solicitamos pantalla completa
-            if (document.documentElement.requestFullscreen) {
-                document.documentElement.requestFullscreen();
-            } else if (document.documentElement.mozRequestFullScreen) { // Firefox
-                document.documentElement.mozRequestFullScreen();
-            } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari
-                document.documentElement.webkitRequestFullscreen();
-            } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
-                document.documentElement.msRequestFullscreen();
-            }
-        } else {
-            // Si ya estamos en pantalla completa, salimos de ella
-            if (document.exitFullscreen) {
-                document.exitFullscreen();
-            } else if (document.mozCancelFullScreen) { // Firefox
-                document.mozCancelFullScreen();
-            } else if (document.webkitExitFullscreen) { // Chrome, Safari
-                document.webkitExitFullscreen();
-            } else if (document.msExitFullscreen) { // IE/Edge
-                document.msExitFullscreen();
-            }
-        }
-    }
 
-    // Función para simular el clic automáticamente después de 1 segundo
-    document.addEventListener('DOMContentLoaded', function() {
-        setTimeout(function() {
-            // Simula el clic en el botón de pantalla completa
-            var fullscreenButton = document.querySelector('.fullscreen-button');
-            if (fullscreenButton) {
-                fullscreenButton.click();
-            }
-        }, 5000); // 5000ms = 1 segundo
-    });
-</script>
 </head>
 <body>
     <header>
@@ -91,8 +50,6 @@
         <div class="buttons-container">
             <button class="home-button" onclick="window.location.href='index.html'">INICIO</button>
             <button class="promo-button" onclick="window.location.href='https://jessiquinterot.github.io/mi-proyecto/promociones.html'">PROMOCIONES</button>
-            <!-- Botón de pantalla completa -->
-            <button class="fullscreen-button" onclick="toggleFullScreen()">Modo Pantalla Completa</button>
         </div>
 
         <!-- Franja blanca con la palabra PIZZAS -->
