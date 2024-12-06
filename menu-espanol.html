@@ -19,7 +19,27 @@
             }
         });
     </script>
-    
+    <script>
+        // Función para abrir en pantalla completa
+        function openFullscreen(pageUrl) {
+            localStorage.setItem('fullscreen', 'true'); // Guardar estado de pantalla completa
+            window.location.href = pageUrl;
+        }
+
+        // Al cargar la página, verificar si debe estar en pantalla completa
+        document.addEventListener("DOMContentLoaded", () => {
+            if (localStorage.getItem('fullscreen') === 'true') {
+                const elem = document.documentElement; // Elemento raíz
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.webkitRequestFullscreen) { // Para Safari
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { // Para IE/Edge
+                    elem.msRequestFullscreen();
+                }
+            }
+        });
+    </script>
     <style>
         /* Clase para la franja blanca con el texto "PIZZAS" */
         .pizza-title {
