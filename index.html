@@ -52,15 +52,10 @@
             }
         }
 
-        // Función para redirigir a una página y luego activar pantalla completa después de un retraso
+        // Función para redirigir a una página
         function goToPage(url) {
-            // Redirigir inmediatamente a la página deseada
+            // Redirigir a la página deseada
             window.location.href = url;
-
-            // Configurar el retraso de 2 segundos para activar pantalla completa
-            setTimeout(function() {
-                toggleFullscreen(); // Activar pantalla completa después de 2 segundos
-            }, 2000); // 2 segundos de delay
         }
     </script>
 </body>

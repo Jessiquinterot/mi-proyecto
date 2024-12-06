@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promociones</title>
     <link rel="stylesheet" href="styles.css">
 
@@ -12,6 +12,7 @@
             margin: 0;
             padding: 0;
             background-color: #050505;
+            height: 100%;
         }
 
         .inicio-button {
@@ -37,6 +38,7 @@
             position: relative;
             max-width: 100%;
             margin: auto;
+            height: 100%;
         }
 
         .slide {
@@ -46,6 +48,8 @@
         .promo-image {
             width: 100%;
             height: auto;
+            max-height: 100vh;  /* Asegura que las imágenes no se sobrepasen en la altura de la ventana */
+            object-fit: cover;  /* Mantiene la proporción de la imagen y la ajusta al contenedor */
         }
     </style>
 </head>
@@ -80,6 +84,16 @@
             setTimeout(showSlides, 4000); // Cambiar cada 4 segundos
         }
         showSlides();
+
+        // Activar pantalla completa al cargar la página
+        window.onload = function() {
+            const doc = document.documentElement;
+            if (!document.fullscreenElement) {
+                doc.requestFullscreen().catch(err => {
+                    console.error(`Error attempting to enable fullscreen mode: ${err.message}`);
+                });
+            }
+        };
     </script>
 </body>
 </html>
