@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Pizza</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        // Al cargar la página, activa pantalla completa si ya estaba activada
+        window.onload = () => {
+            if (localStorage.getItem('fullscreen') === 'true') {
+                document.documentElement.requestFullscreen();
+            }
+        };
+
+        // Función para entrar en pantalla completa
+        function enterFullscreen() {
+            document.documentElement.requestFullscreen();
+            localStorage.setItem('fullscreen', 'true'); // Guarda el estado
+        }
+
+        // Función para salir de pantalla completa
+        function exitFullscreen() {
+            if (document.fullscreenElement) {
+                document.exitFullscreen();
+            }
+            localStorage.setItem('fullscreen', 'false'); // Actualiza el estado
+        }
+    </script>
 </head>
 <body>
     <div class="main-container">
@@ -13,36 +35,17 @@
             <img src="logo.png" alt="Big Pizza Logo" class="logo">
         </div>
 
+        <!-- Botón para salir de pantalla completa (solo en index.html) -->
+        <button onclick="exitFullscreen()">Salir de Pantalla Completa</button>
+
         <!-- Contenedor de botones -->
         <div class="button-container">
-            <button class="promo-button" onclick="openFullscreen('promociones.html')">PROMOCIONES</button>
-            <button class="menu-button" onclick="openFullscreen('menu-espanol.html')">MENÚ EN ESPAÑOL</button>
-            <button class="menu-button" onclick="openFullscreen('menu-portugues.html')">MENÚ EM PORTUGUÊS</button>
-            <button class="menu-button" onclick="openFullscreen('menu-ingles.html')">MENU IN ENGLISH</button>
-            <button class="menu-button" onclick="openFullscreen('menu-ruso.html')">МЕНЮ НА РУССКОМ</button>
+            <button class="promo-button" onclick="enterFullscreen(); window.location.href='promociones.html';">PROMOCIONES</button>
+            <button class="menu-button" onclick="enterFullscreen(); window.location.href='menu-espanol.html';">MENÚ EN ESPAÑOL</button>
+            <button class="menu-button" onclick="enterFullscreen(); window.location.href='menu-portugues.html';">MENÚ EM PORTUGUÊS</button>
+            <button class="menu-button" onclick="enterFullscreen(); window.location.href='menu-ingles.html';">MENU IN ENGLISH</button>
+            <button class="menu-button" onclick="enterFullscreen(); window.location.href='menu-ruso.html';">МЕНЮ НА РУССКОМ</button>
         </div>
     </div>
-
-    <script>
-        // Función para abrir en pantalla completa
-        function openFullscreen(pageUrl) {
-            localStorage.setItem('fullscreen', 'true'); // Guardar estado de pantalla completa
-            window.location.href = pageUrl;
-        }
-
-        // Al cargar la página, verificar si debe estar en pantalla completa
-        document.addEventListener("DOMContentLoaded", () => {
-            if (localStorage.getItem('fullscreen') === 'true') {
-                const elem = document.documentElement; // Elemento raíz
-                if (elem.requestFullscreen) {
-                    elem.requestFullscreen();
-                } else if (elem.webkitRequestFullscreen) { // Para Safari
-                    elem.webkitRequestFullscreen();
-                } else if (elem.msRequestFullscreen) { // Para IE/Edge
-                    elem.msRequestFullscreen();
-                }
-            }
-        });
-    </script>
 </body>
 </html>
