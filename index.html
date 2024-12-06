@@ -18,11 +18,6 @@
             cursor: pointer;
             z-index: 1000;
         }
-        .button-container button {
-            padding: 10px 20px;
-            margin: 5px;
-            font-size: 1em;
-        }
     </style>
 </head>
 <body>
@@ -46,7 +41,6 @@
     <button class="fullscreen-button" onclick="toggleFullscreen()">Pantalla Completa</button>
 
     <script>
-        // Función para poner la página en pantalla completa
         function toggleFullscreen() {
             const doc = document.documentElement;
             if (!document.fullscreenElement) {
@@ -58,15 +52,15 @@
             }
         }
 
-        // Función para ir a una página y activar pantalla completa
+        // Función para redirigir a una página y luego activar pantalla completa después de un retraso
         function goToPage(url) {
-            // Activar pantalla completa antes de redirigir
-            toggleFullscreen();
+            // Redirigir inmediatamente a la página deseada
+            window.location.href = url;
 
-            // Redirigir después de 1 segundo para dar tiempo a la pantalla completa
+            // Configurar el retraso de 2 segundos para activar pantalla completa
             setTimeout(function() {
-                window.location.href = url;
-            }, 1000); // Puedes ajustar el tiempo si es necesario
+                toggleFullscreen(); // Activar pantalla completa después de 2 segundos
+            }, 2000); // 2 segundos de delay
         }
     </script>
 </body>
