@@ -1,55 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Pizza</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu.css">
     <style>
-        .fullscreen-button {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            padding: 10px 20px;
-            background-color: #f39c12;
-            color: white;
+        /* Estilo para los botones */
+        .home-button, .promo-button {
+            font-size: 1.2em; /* Aumentar tamaño de la letra */
+            color: white; /* Letra blanca */
+            background-color: #f39c12; /* Color de fondo de los botones */
             border: none;
-            border-radius: 5px;
+            padding: 10px 20px;
+            margin: 5px;
             cursor: pointer;
-            z-index: 1000;
         }
     </style>
 </head>
 <body>
-    <div class="main-container">
-        <!-- Contenedor del logo -->
+    <header>
         <div class="logo-container">
             <img src="logo.png" alt="Big Pizza Logo" class="logo">
         </div>
 
-        <!-- Contenedor de botones -->
-        <div class="button-container">
-            <button class="promo-button" onclick="window.location.href='promociones.html'">PROMOCIONES</button>
-            <button class="menu-button" onclick="window.location.href='menu-espanol.html'">MENÚ EN ESPAÑOL</button>
-            <button class="menu-button" onclick="window.location.href='menu-portugues.html'">MENÚ EM PORTUGUÊS</button>
-            <button class="menu-button" onclick="window.location.href='menu-ingles.html'">MENU IN ENGLISH</button>
-            <button class="menu-button" onclick="window.location.href='menu-ruso.html'">МЕНЮ НА РУССКОМ</button>
+        <div class="buttons-container">
+            <!-- Botón que activa pantalla completa y redirige -->
+            <button class="home-button" onclick="goToHome()">INICIO</button>
+            <button class="promo-button" onclick="goToPromos()">PROMOCIONES</button>
         </div>
-    </div>
-
-    <!-- Botón de pantalla completa -->
-    <button class="fullscreen-button" onclick="toggleFullscreen()">Pantalla Completa</button>
+    </header>
 
     <script>
-        function toggleFullscreen() {
-            const doc = document.documentElement;
-            if (!document.fullscreenElement) {
-                doc.requestFullscreen().catch(err => {
-                    console.error(`Error attempting to enable fullscreen mode: ${err.message}`);
-                });
-            } else {
-                document.exitFullscreen();
+        // Función para poner en pantalla completa y luego redirigir a la página de inicio
+        function goToHome() {
+            // Intenta poner la página en pantalla completa
+            if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen();
+            } else if (document.documentElement.mozRequestFullScreen) { // Firefox
+                document.documentElement.mozRequestFullScreen();
+            } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari, Opera
+                document.documentElement.webkitRequestFullscreen();
+            } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+                document.documentElement.msRequestFullscreen();
             }
+
+            // Redirigir después de 1 segundo para dar tiempo a la pantalla completa
+            setTimeout(function() {
+                window.location.href = 'index.html'; // Cambia a la URL deseada
+            }, 1000);
+        }
+
+        // Función para poner en pantalla completa y luego redirigir a la página de promociones
+        function goToPromos() {
+            // Intenta poner la página en pantalla completa
+            if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen();
+            } else if (document.documentElement.mozRequestFullScreen) { // Firefox
+                document.documentElement.mozRequestFullScreen();
+            } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari, Opera
+                document.documentElement.webkitRequestFullscreen();
+            } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+                document.documentElement.msRequestFullscreen();
+            }
+
+            // Redirigir después de 1 segundo para dar tiempo a la pantalla completa
+            setTimeout(function() {
+                window.location.href = 'https://jessiquinterot.github.io/mi-proyecto/promociones.html'; // Cambia a la URL deseada
+            }, 1000);
         }
     </script>
 </body>
