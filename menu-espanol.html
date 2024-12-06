@@ -5,21 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú Español - Big Pizza</title>
     <link rel="stylesheet" href="menu.css">
-    <script>
-        // Activar pantalla completa automáticamente al cargar la página
-        document.addEventListener("DOMContentLoaded", () => {
-            const elem = document.documentElement;
-            if (!document.fullscreenElement) {
-                if (elem.requestFullscreen) {
-                    elem.requestFullscreen();
-                } else if (elem.webkitRequestFullscreen) { // Para Safari
-                    elem.webkitRequestFullscreen();
-                } else if (elem.msRequestFullscreen) { // Para IE/Edge
-                    elem.msRequestFullscreen();
-                }
-            }
-        });
-    </script>
+
     <style>
         /* Clase para la franja blanca con el texto "PIZZAS" */
         .pizza-title {
@@ -29,16 +15,16 @@
             font-size: 2em;
             font-weight: bold;
             color: #333;
-            width: 100%;
-            box-sizing: border-box;
-            margin-top: 20px;
+            width: 100%; /* Hace que la franja ocupe todo el ancho */
+            box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+            margin-top: 20px; /* Espacio entre los botones y la franja */
         }
 
         /* Estilo para los botones */
         .home-button, .promo-button {
-            font-size: 1.2em;
-            color: white;
-            background-color: #f39c12;
+            font-size: 1.2em; /* Aumentar tamaño de la letra */
+            color: white; /* Letra blanca */
+            background-color: #f39c12; /* Color de fondo de los botones */
             border: none;
             padding: 10px 20px;
             margin: 5px;
@@ -47,12 +33,13 @@
 
         /* Ajuste de tamaño de la imagen de la pizza */
         .masa-option img {
-            width: 356px;
-            height: 232px;
-            object-fit: cover;
+            width: 356px; /* Ancho de la imagen */
+            height: 232px; /* Alto de la imagen */
+            object-fit: cover; /* Asegura que la imagen se ajuste sin distorsionarse */
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="logo-container">
@@ -64,6 +51,7 @@
             <button class="promo-button" onclick="window.location.href='https://jessiquinterot.github.io/mi-proyecto/promociones.html'">PROMOCIONES</button>
         </div>
 
+        <!-- Franja blanca con la palabra PIZZAS -->
         <div class="pizza-title">PIZZAS</div>
     </header>
 
@@ -164,5 +152,10 @@
     <footer>
         <p>&copy; 2024 Servicios Madeirense | Todos los derechos reservados</p>
     </footer>
+
+    <script>
+        // Solicitar pantalla completa al cargar la página
+        document.documentElement.requestFullscreen();
+    </script>
 </body>
 </html>
