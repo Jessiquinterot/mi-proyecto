@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú Español - Big Pizza</title>
     <link rel="stylesheet" href="menu.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (localStorage.getItem('fullscreen') === 'true') {
+                const elem = document.documentElement;
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.webkitRequestFullscreen) {
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) {
+                    elem.msRequestFullscreen();
+                }
+            }
+        });
+    </script>
+    
     <style>
         /* Clase para la franja blanca con el texto "PIZZAS" */
         .pizza-title {
