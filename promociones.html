@@ -2,26 +2,10 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.2">
     <title>Promociones</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        // Activar pantalla completa si el parámetro "fullscreen" está presente en la URL
-        window.onload = () => {
-            const params = new URLSearchParams(window.location.search);
-            if (params.get("fullscreen") === "true") {
-                const enterFullscreen = () => {
-                    const docEl = document.documentElement;
-                    if (docEl.requestFullscreen) docEl.requestFullscreen();
-                    else if (docEl.mozRequestFullScreen) docEl.mozRequestFullScreen();
-                    else if (docEl.webkitRequestFullscreen) docEl.webkitRequestFullscreen();
-                    else if (docEl.msRequestFullscreen) docEl.msRequestFullscreen();
-                };
 
-                if (!document.fullscreenElement) enterFullscreen();
-            }
-        };
-    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
