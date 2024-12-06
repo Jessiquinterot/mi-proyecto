@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promociones</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        // Activar pantalla completa al cargar la página
+        window.onload = () => {
+            const enterFullscreen = () => {
+                const docEl = document.documentElement;
+                if (docEl.requestFullscreen) {
+                    docEl.requestFullscreen();
+                } else if (docEl.mozRequestFullScreen) { // Soporte para Firefox
+                    docEl.mozRequestFullScreen();
+                } else if (docEl.webkitRequestFullscreen) { // Soporte para Chrome, Safari y Opera
+                    docEl.webkitRequestFullscreen();
+                } else if (docEl.msRequestFullscreen) { // Soporte para Edge
+                    docEl.msRequestFullscreen();
+                }
+            };
+
+            // Intenta entrar en pantalla completa si no lo está
+            if (!document.fullscreenElement) {
+                enterFullscreen();
+            }
+        };
+    </script>
+</head>
     <style>
         /* Estilo para el botón "Inicio" */
         .inicio-button {

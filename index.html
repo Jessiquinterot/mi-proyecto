@@ -6,45 +6,45 @@
     <title>Big Pizza</title>
     <link rel="stylesheet" href="styles.css">
     <script>
-        // Al cargar la página, activa pantalla completa si ya estaba activada
-        window.onload = () => {
-            if (localStorage.getItem('fullscreen') === 'true') {
-                document.documentElement.requestFullscreen();
+        // Función para alternar el estado de pantalla completa
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen(); // Entra en pantalla completa
+                document.getElementById('fullscreen-button').innerText = 'Salir de pantalla completa';
+            } else {
+                document.exitFullscreen(); // Sale de pantalla completa
+                document.getElementById('fullscreen-button').innerText = 'Expandir pantalla';
             }
-        };
-
-        // Función para entrar en pantalla completa
-        function enterFullscreen() {
-            document.documentElement.requestFullscreen();
-            localStorage.setItem('fullscreen', 'true'); // Guarda el estado
         }
 
-        // Función para salir de pantalla completa
-        function exitFullscreen() {
+        // Cambiar el texto del botón según el estado de pantalla completa al cargar la página
+        document.addEventListener('fullscreenchange', () => {
+            const button = document.getElementById('fullscreen-button');
             if (document.fullscreenElement) {
-                document.exitFullscreen();
+                button.innerText = 'Salir de pantalla completa';
+            } else {
+                button.innerText = 'Expandir pantalla';
             }
-            localStorage.setItem('fullscreen', 'false'); // Actualiza el estado
-        }
+        });
     </script>
 </head>
 <body>
     <div class="main-container">
+        <!-- Botón para alternar pantalla completa -->
+        <button id="fullscreen-button" style="position: absolute; top: 10px; right: 10px;" onclick="toggleFullscreen()">Expandir pantalla</button>
+
         <!-- Contenedor del logo -->
         <div class="logo-container">
             <img src="logo.png" alt="Big Pizza Logo" class="logo">
         </div>
 
-        <!-- Botón para salir de pantalla completa (solo en index.html) -->
-        <button onclick="exitFullscreen()">Salir de Pantalla Completa</button>
-
         <!-- Contenedor de botones -->
         <div class="button-container">
-            <button class="promo-button" onclick="enterFullscreen(); window.location.href='promociones.html';">PROMOCIONES</button>
-            <button class="menu-button" onclick="enterFullscreen(); window.location.href='menu-espanol.html';">MENÚ EN ESPAÑOL</button>
-            <button class="menu-button" onclick="enterFullscreen(); window.location.href='menu-portugues.html';">MENÚ EM PORTUGUÊS</button>
-            <button class="menu-button" onclick="enterFullscreen(); window.location.href='menu-ingles.html';">MENU IN ENGLISH</button>
-            <button class="menu-button" onclick="enterFullscreen(); window.location.href='menu-ruso.html';">МЕНЮ НА РУССКОМ</button>
+            <button class="promo-button" onclick="window.location.href='promociones.html'">PROMOCIONES</button>
+            <button class="menu-button" onclick="window.location.href='menu-espanol.html'">MENÚ EN ESPAÑOL</button>
+            <button class="menu-button" onclick="window.location.href='menu-portugues.html'">MENÚ EM PORTUGUÊS</button>
+            <button class="menu-button" onclick="window.location.href='menu-ingles.html'">MENU IN ENGLISH</button>
+            <button class="menu-button" onclick="window.location.href='menu-ruso.html'">МЕНЮ НА РУССКОМ</button>
         </div>
     </div>
 </body>
