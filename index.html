@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Corregido para evitar zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Pizza</title>
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -10,8 +10,9 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            font-size: 1.2em; /* Aumenta el tamaño de los textos en un 20% */
+            background-color: #050505; /* Fondo negro */
+            font-size: 1.2em; /* Aumento el tamaño de los textos en un 20% */
+            color: white; /* Asegura que el texto sea visible sobre fondo negro */
         }
 
         /* Estilo para los botones */
@@ -45,25 +46,6 @@
         .logo {
             width: 200px;
         }
-
-        /* Botón de pantalla completa */
-        .fullscreen-button {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            padding: 12px 24px; /* Aumento el tamaño del padding */
-            background-color: #f39c12;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            z-index: 1000;
-            font-size: 18px; /* Aumento el tamaño del texto */
-        }
-
-        .fullscreen-button:hover {
-            background-color: #e67e22;
-        }
     </style>
 </head>
 <body>
@@ -82,21 +64,5 @@
             <button class="menu-button" onclick="window.location.href='menu-ruso.html'">МЕНЮ НА РУССКОМ</button>
         </div>
     </div>
-
-    <!-- Botón de pantalla completa -->
-    <button class="fullscreen-button" onclick="toggleFullscreen()">Pantalla Completa</button>
-
-    <script>
-        function toggleFullscreen() {
-            const doc = document.documentElement;
-            if (!document.fullscreenElement) {
-                doc.requestFullscreen().catch(err => {
-                    console.error(`Error attempting to enable fullscreen mode: ${err.message}`);
-                });
-            } else {
-                document.exitFullscreen();
-            }
-        }
-    </script>
 </body>
 </html>
